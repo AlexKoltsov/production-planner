@@ -9,4 +9,8 @@ public interface ApiUrl {
     interface Public {
         String BASE = API_ROOT_PATH + "/public";
     }
+
+    interface Item {
+        String BASE = API_ROOT_PATH + "/item";
+    }
 }
