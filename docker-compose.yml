@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  psql:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_DB: production-planner
+      POSTGRES_USER: production-planner
+      POSTGRES_PASSWORD: production-planner
+    ports:
+      - "5432:5432"
