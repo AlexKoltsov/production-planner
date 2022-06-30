@@ -1,25 +1,24 @@
-package com.kotlsov.production.planner.presentation.api;
+package com.kotlsov.production.planner.web.api;
 
-import com.kotlsov.production.planner.ApiUrl;
 import com.kotlsov.production.planner.common.api.CrudApi;
-import com.kotlsov.production.planner.presentation.dto.ItemCreateDto;
-import com.kotlsov.production.planner.presentation.dto.ItemDto;
+import com.kotlsov.production.planner.web.dto.ItemCreateDto;
+import com.kotlsov.production.planner.web.dto.ItemDto;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping(ApiUrl.Item.BASE)
+@RequestMapping(ApiUrls.Item.BASE)
 public interface ItemApi extends CrudApi<UUID, ItemDto, ItemCreateDto> {
 
     @GetMapping
     @Override
     List<ItemDto> getAll();
 
-    @GetMapping("{uuid}")
+    @GetMapping("{id}")
     @Override
-    List<ItemDto> getById(@PathVariable UUID uuid);
+    ItemDto getById(@PathVariable UUID id);
 
     @PostMapping
     @Override
@@ -29,7 +28,7 @@ public interface ItemApi extends CrudApi<UUID, ItemDto, ItemCreateDto> {
     @Override
     ItemDto update(@Valid @RequestBody ItemDto resource);
 
-    @DeleteMapping("{uuid}")
+    @DeleteMapping("{id}")
     @Override
-    boolean deleteById(@PathVariable UUID uuid);
+    boolean deleteById(@PathVariable UUID id);
 }

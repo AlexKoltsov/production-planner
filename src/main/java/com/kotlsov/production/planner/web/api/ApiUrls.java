@@ -1,6 +1,6 @@
-package com.kotlsov.production.planner;
+package com.kotlsov.production.planner.web.api;
 
-public interface ApiUrl {
+public interface ApiUrls {
 
     String API_VERSION = "v1";
     String API_VERSION_PATH = "/" + API_VERSION;

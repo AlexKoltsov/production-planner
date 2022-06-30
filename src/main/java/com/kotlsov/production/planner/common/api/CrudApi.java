@@ -9,7 +9,7 @@ import java.util.List;
 public interface CrudApi<ID extends Serializable, T extends BaseDto<ID>, U extends BaseCreateDto> {
     List<T> getAll();
 
-    List<T> getById(ID id);
+    T getById(ID id);
 
     T create(U resource);
 

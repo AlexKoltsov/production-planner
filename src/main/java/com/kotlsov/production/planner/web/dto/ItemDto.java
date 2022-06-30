@@ -1,4 +1,4 @@
-package com.kotlsov.production.planner.presentation.dto;
+package com.kotlsov.production.planner.web.dto;
 
 import com.kotlsov.production.planner.common.dto.BaseDto;
 import lombok.Data;

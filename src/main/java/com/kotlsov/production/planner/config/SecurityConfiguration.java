@@ -1,6 +1,6 @@
 package com.kotlsov.production.planner.config;
 
-import com.kotlsov.production.planner.ApiUrl;
+import com.kotlsov.production.planner.web.api.ApiUrls;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -30,7 +30,8 @@ public class SecurityConfiguration {
             .and()
                 .authorizeRequests()
                     .antMatchers(WHITE_LIST).permitAll()
-                    .antMatchers(ApiUrl.Public.BASE + WILDCARD).permitAll()
+                    .antMatchers(ApiUrls.Public.BASE + WILDCARD).permitAll()
+                    .antMatchers(ApiUrls.Item.BASE + WILDCARD).permitAll()
                 .anyRequest().authenticated();
         // @formatter:on
         return http.build();
