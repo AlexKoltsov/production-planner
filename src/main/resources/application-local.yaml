@@ -1,0 +1,11 @@
+DB_HOST: localhost
+DB_PORT: 5432
+DB_NAME: production-planner
+DB_USER: production-planner
+DB_PASSWORD: production-planner
+
+spring:
+  liquibase:
+    contexts: local
+  jpa:
+    show-sql: true
