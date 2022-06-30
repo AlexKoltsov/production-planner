@@ -8,7 +8,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class PpSecurityConfiguration {
+public class SecurityConfiguration {
 
     private static final String WILDCARD = "/**";
     private static final String[] WHITE_LIST = {
